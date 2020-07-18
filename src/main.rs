@@ -2,7 +2,7 @@ use std::io;
 
 fn main() {
     //get values from terminal
-    println!("     Program Start . . .! \n");
+    println!("\n \n \n     Program Start . . .! \n");
     loop {
 	println!("Input Base :");
 	
