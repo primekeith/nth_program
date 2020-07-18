@@ -2,9 +2,9 @@ use std::io;
 
 fn main() {
     //get values from terminal
-    println!("Welcome to nth program . . .! \n");
+    println!("     Program Start . . .! \n");
     loop {
-	println!("Input your base :");
+	println!("Input Base :");
 	
 	let mut base = String::new();
 
@@ -12,12 +12,12 @@ fn main() {
 	    .read_line(&mut base)
 	    .expect("Failed to read base.");
 	
-	let base2: i64 = match base.trim().parse() {
+	let base2: i128 = match base.trim().parse() {
 	    Ok(num) => num,
 	    Err(_) => continue,
 	};
 	
-	println!("Input your power :");
+	println!("Input Power :");
 
 	let mut power = String::new();
 
@@ -31,20 +31,20 @@ fn main() {
 	};
 	
 	let mut i = 1;
-	let mut result: i64 = base2;
+	let mut result: i128 = base2;
 	
 	while i <= power {
 	    if i == power {
 		break;
 	    }
-	    result = result * result;
+	    result = result * base2;
 	    i += 1;
 	}
 
 	println!("\n");
-	println!("->Base: {}, Power: {}", base2, power);
-	println!("->Result: {}", result);
-	println!("\n successful . . . \n \n \n \n \n Program restarted . . . \n");
+	println!("-> Base: | {} |, Power: | {} | \n", base2, power);
+	println!("-> Result: || {} ||", result);
+	println!("\n \nProgram Complete! \n \n \n \n \n      Program restarted . . . \n");
 
     }
 }
